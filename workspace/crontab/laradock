@@ -1,0 +1,7 @@
+#WEERMAN MAGENTO 2
+#* * * * * /usr/bin/php /var/www/html/WeermanMagento2new/bin/magento cron:run | grep -v "Ran jobs by schedule" >> /var/www/html/WeermanMagento2new/var/log/magento.cron.log
+#* * * * * /usr/bin/php /var/www/html/WeermanMagento2new/update/cron.php >> /var/www/html/WeermanMagento2new/var/log/update.cron.log
+#* * * * * /usr/bin/php /var/www/html/WeermanMagento2new/bin/magento setup:cron:run >> /var/www/html/WeermanMagento2new/var/log/setup.cron.log
+
+#WEERMAN APPS
+#* * * * * laradock /usr/bin/php /var/www/html/WeermanCentralApi artisan schedule:run >> /dev/null 2>&1
